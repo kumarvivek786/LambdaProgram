@@ -64,7 +64,17 @@ namespace Lambda
                 Console.WriteLine("Address :" + emp.Address);
             }
 
-            Console.ReadLine();
+            //uc-7
+            Console.WriteLine("Enter Name");
+            string Name1 = Console.ReadLine();
+
+            employee.RemoveAll(x => (x.Name == Name1));
+            
+            if (employee.TrueForAll(x => x.Name!=Name1))
+                Console.WriteLine("not present");
+                Console.ReadLine();
+
+            
         }
     }
 }
