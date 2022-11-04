@@ -37,6 +37,10 @@ namespace Lambda
                 Console.WriteLine("Age :" + emp1.Age);
                 Console.WriteLine("Address :" + emp1.Address);
             }
+            //uc4
+            var Result2 = employee.Average(e => e.Age);
+            Console.WriteLine("The Avereage age :");
+            Console.WriteLine("Avg Age" + Result2);
             Console.ReadLine();
         }
     }
