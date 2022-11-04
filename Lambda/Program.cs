@@ -17,8 +17,8 @@ namespace Lambda
                 new Person { SSN = 12, Name = "Amit", Age = 28, Address = "Mumbai" },
                 new Person { SSN = 13, Name = "Seema", Age = 28, Address = "satara" },
                 new Person { SSN = 14, Name = "Ram", Age = 20, Address = "pune" },
-                new Person { SSN = 15, Name = "Swati", Age = 61, Address = "satara" },
                 new Person { SSN = 16, Name = "vikas", Age = 15, Address = "delhi" },
+                new Person { SSN = 15, Name = "Swati", Age = 61, Address = "satara" },
 
             };
             //uc2
@@ -53,7 +53,17 @@ namespace Lambda
             }
             else
                 Console.WriteLine("not present");
-            Console.ReadLine();
+
+            //uc6
+
+            var Result4 = employee.SkipWhile(x => x.Age < 60);
+            foreach (Person emp in Result4)
+            {
+                Console.WriteLine("Name :" + emp.Name);
+                Console.WriteLine("Age :" + emp.Age);
+                Console.WriteLine("Address :" + emp.Address);
+            }
+
             Console.ReadLine();
         }
     }
