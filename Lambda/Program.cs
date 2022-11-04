@@ -29,6 +29,14 @@ namespace Lambda
                 Console.WriteLine("Age :" + emp.Age);
                 Console.WriteLine("Address :" + emp.Address);
             }
+            //uc3
+            var Result = employee.FindAll(x => (x.Age >= 13 && x.Age <= 18));
+            foreach (Person emp1 in Result)
+            {
+                Console.WriteLine("Name :" + emp1.Name);
+                Console.WriteLine("Age :" + emp1.Age);
+                Console.WriteLine("Address :" + emp1.Address);
+            }
             Console.ReadLine();
         }
     }
