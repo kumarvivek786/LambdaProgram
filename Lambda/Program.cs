@@ -41,6 +41,19 @@ namespace Lambda
             var Result2 = employee.Average(e => e.Age);
             Console.WriteLine("The Avereage age :");
             Console.WriteLine("Avg Age" + Result2);
+            
+            
+            //uc 5
+            Console.WriteLine("Enter Name");
+            string Name = Console.ReadLine();
+
+            if (employee.Any(x => (x.Name == Name)))
+            {
+                Console.WriteLine("Present in list");
+            }
+            else
+                Console.WriteLine("not present");
+            Console.ReadLine();
             Console.ReadLine();
         }
     }
