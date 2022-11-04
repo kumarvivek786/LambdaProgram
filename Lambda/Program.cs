@@ -18,10 +18,18 @@ namespace Lambda
                 new Person { SSN = 13, Name = "Seema", Age = 28, Address = "satara" },
                 new Person { SSN = 14, Name = "Ram", Age = 20, Address = "pune" },
                 new Person { SSN = 15, Name = "Swati", Age = 61, Address = "satara" },
-                new Person { SSN = 15, Name = "vikas", Age = 15, Address = "delhi" },
+                new Person { SSN = 16, Name = "vikas", Age = 15, Address = "delhi" },
 
             };
-           
+            //uc2
+            var result = employee.FindAll(x => x.Age < 60).Take(2);
+            foreach (Person emp in result)
+            {
+                Console.WriteLine("Name :" + emp.Name);
+                Console.WriteLine("Age :" + emp.Age);
+                Console.WriteLine("Address :" + emp.Address);
+            }
+            Console.ReadLine();
         }
     }
 }
